@@ -2,7 +2,7 @@ import { doc, getDoc, updateDoc } from 'firebase/firestore/lite'
 import { FireBaseDB } from '../firebase/firebaseConfig'
 
 const db = FireBaseDB
-const idHome = 'xGQdWbpWuAKfp39ALrC2'
+const idHome = 'AGiRTxhot4MQrAlUdnDf'
 
 /*
 const example = {
