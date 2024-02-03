@@ -56,7 +56,7 @@ const VideosComponent = ({ list }) => {
       }}
     >
       {list?.map((video, index) => (
-        <iframe key={index} src={video} style={videoStyle} allowFullScreen />
+        <iframe key={index} src={video} style={videoStyle} loading='lazy' allowFullScreen />
       ))}
     </Grid>
   )
@@ -98,7 +98,12 @@ export const HomePage = () => {
           justifyContent: 'center'
         }}
       >
+
         <PrincipalImgComponent events={events} />
+
+        <Typography variant='h1' sx={{ textAlign: 'center', marginTop: '10px', fontSize: '2rem' }}>
+          Corporación Departamentar de derechos Humanos CORPOREDDEH
+        </Typography>
         <NavegationComponent windowSize={windowSize} />
         <CounterComponent mes={month()} counter={data?.counter} />
         <Grid
@@ -124,6 +129,7 @@ export const HomePage = () => {
               height='450'
               style={{ border: 0, pointerEvents: 'none' }}
               allowFullScreen
+              loading='lazy'
             />
           </Paper>
           <SendMessageForm />
